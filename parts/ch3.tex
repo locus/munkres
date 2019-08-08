@@ -16,6 +16,25 @@
   From this we conclude that $A$ is in fact connected.
 }
 
+\answer{6}{
+  Let $S=C \cap A$ and $T=C \cap (X-A)$.
+  From the exercise statement we know that $S$ and $T$ are nonempty; moreover $C=S \cup T$.
+  If neither $S$ nor $T$ contains a limit point of the other, then $C$ is not connected (according to Lemma 23.1).
+  Therefore, since $C$ is actually connected, either (1) $T$ contains a limit point of $S$, or (2) $S$ contains a limit point of $T$.
+
+  In the first case, the set $\overline{S}\cap T$ is nonempty. Because
+  \begin{equation*}
+    \overline{S} \cap T = \overline{C \cap A} \cap C \cap (X-A) \subseteq C \cap \overline{A} \cap \overline{X-A} = C \cap \Bd(A),
+  \end{equation*}
+  we have that $C$ intersects $\Bd(A)$.
+
+  In the second case, the set $S \cap \overline{T}$ is nonempty. Since
+  \begin{equation*}
+    S \cap \overline{T} = C \cap A \cap \overline{C \cap (X-A)} \subseteq C \cap \overline{A} \cap \overline{X-A} = C \cap \Bd(A),
+  \end{equation*}
+  we also have that $C$ intersects $\Bd(A)$.
+}
+
 \answer{11}{
   Suppose $C,D$ are two open sets forming a separation of $X$.
   Take some $y \in Y$ such that $p^{-1}(\{y\})$ intersects $C$.
