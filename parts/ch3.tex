@@ -1,0 +1,39 @@
+\chapter{Connectedness and Compactness}
+\setcounter{section}{22}
+
+\section{Connected Spaces}
+
+\answer{2}{
+  Suppose $C,D$ are two open sets forming a separation of $A=\bigcup A_n$.
+  By Lemma 23.2, we know that for each $n$, the subspace $A_n$ is either completely contained in $C$ or completely contained in $D$.
+
+  Let $J=\{i \in \mathbb{N}\ |\ A_i \subseteq D\}$.
+  Because the natural numbers are well-ordered, there exists a least element of $J$, say $k$.
+  Without loss of generality, $A_0 \subseteq C$; therefore $k > 0$.
+  By minimality of $k$, we have $A_k \subseteq D$ while $A_{k-1} \subseteq C$.
+  However, $A_{k-1} \cap A_k \neq \varnothing$ by hypothesis!
+  This contradicts the fact that $C \cap D \neq \varnothing$.
+  From this we conclude that $A$ is in fact connected.
+}
+
+\answer{11}{
+  Suppose $C,D$ are two open sets forming a separation of $X$.
+  Take some $y \in Y$ such that $p^{-1}(\{y\})$ intersects $C$.
+  By hypothesis, $p^{-1}(\{y\})$ is a connected subspace of $X$.
+  In this case, Lemma 23.2 tells us that $p^{-1}(\{y\})$ is completely contained in $C$.
+  Thus $C$ is a saturated open set of $X$ (i.e. it is the preimage of a subset of $Y$).
+  A similar argument shows that $D$ is also saturated.
+
+  Since $p$ is a quotient map, it maps saturated open sets of $X$ to open sets of $Y$.
+  Hence $p(C)$ and $p(D)$ are (disjoint*, nonempty) open sets of $Y$.
+  Because $p$ is surjective and $X$ is the union of $C$ and $D$, we have $Y=p(C) \cup p(D)$.
+  This is in contradiction with the hypothesis that $Y$ is connected!
+  Therefore $X$ must be connected.
+
+  *Maybe it is not clear why $p(C)$ and $p(D)$ are disjoint.
+  The reason is this: suppose they are not and take some $y$ in their intersection.
+  Then there exists $c \in C$ and $d \in D$ such that $p(c)=p(d)=y$.
+  As a consequence $p^{-1}(\{y\})$ contains both $c$ and $d$, that is, it intersects both $C$ and $D$.
+  But this is in contradiction with $C$ and $D$ being saturated sets!
+  Hence there cannot be anything in common between $p(C)$ and $p(D)$.
+}

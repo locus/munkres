@@ -1,0 +1,35 @@
+% xelatex
+
+\documentclass{book}
+
+\usepackage{changepage}
+\usepackage{geometry}
+\usepackage{enumitem}
+\geometry{a4paper, top=1in, bottom=1.5in}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\usepackage{titlesec}
+\titleformat{\chapter}[display]{\normalfont\bfseries}{}{0pt}{\Huge}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\newcommand{\answer}[2]{
+  \fbox{\textbf{\arabic{chapter}.\arabic{section}.#1}}
+  #2
+}
+
+\begin{document}
+
+\title{James R. Munkres - Topology (2nd edition)\\Answers to Selected Exercises}
+\author{Marc-André Brochu}
+\date{Summer 2019}
+\maketitle
+
+\setcounter{chapter}{2}
+
+\include{parts/ch3}
+
+\end{document}
+
